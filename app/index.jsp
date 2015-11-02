@@ -6,4 +6,4 @@
    out.print( "<h2 align=\"center\">" +date.toString()+"</h2>");
 %>
 
-<h4>Version 8 </h4>
+<h4>Version 9 </h4>
