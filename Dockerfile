@@ -4,6 +4,8 @@ RUN apt-get update && apt-get install -yq nano less
 RUN echo 'export TERM=xterm' >> ~/.bashrc
 ADD server.xml conf/
 
+ADD . /context/
+
 # copy master in case of master branch and HEAD in case of tag
 ADD .git/refs/heads ./git
 ADD .git/HEAD ./git
