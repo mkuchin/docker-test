@@ -7,7 +7,7 @@ ADD server.xml conf/
 ADD . /context/
 
 # copy master in case of master branch and HEAD in case of tag
-RUN if [ -f /context/.git/master ]; then  cat /context/.git/master; else cat /context/.git/HEAD; fi > version
+RUN if [ -f /context/.git/refs/heads/master  ]; then  cat /context/.git/refs/heads/master; else cat /context/.git/HEAD; fi > version
 
 # workdir is /usr/local/tomcat/
 ADD app webapps/app
