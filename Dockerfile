@@ -11,5 +11,5 @@ RUN if [ -f .git/master ]; then  cat .git/master; else cat git/HEAD; fi > versio
 
 # workdir is /usr/local/tomcat/
 ADD app webapps/app
-RUN copy version webapps/app/version.txt
+RUN cp version webapps/app/version.txt
 EXPOSE 8080
